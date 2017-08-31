@@ -3,4 +3,3 @@ class Telefone:
         self.numero = numero
         self.ddd = ddd
         self.codigo = codigo
-
