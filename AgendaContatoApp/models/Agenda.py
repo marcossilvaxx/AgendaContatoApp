@@ -1,8 +1,7 @@
 class Agenda:
-    def __init__(self, proprietario):
+    def __init__(self, proprietario, contatos=[]):
         self.proprietario = proprietario
-        self.contatos = []
-        print("Agenda criada com sucesso.")
+        self.contatos = contatos
 
     def contarContatos(self):
         return len(self.contatos)
@@ -16,7 +15,7 @@ class Agenda:
 
     def excluirContato(self, nome):
         for contato in self.contatos:
-            if contato.pessoa.nome == nome:
+            if contato['pessoa']['nome'].lower() == nome.lower():
                 self.contatos.remove(contato)
+                print("Contato excluído.")
                 break
-        print("Contato excluído.")
